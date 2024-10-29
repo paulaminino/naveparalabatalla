@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparación de Nave para Batalla Galáctica</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-white">
+    <!-- Badget de cantidad de elementos almacenados. Implementado con bootstrap -->
+    <button id="mi-nave" class="btn">
+        Mi Nave <span id="badge-cantidad" class="badge badge-light">0</span>
+    </button>
+    
+<div class="container mt-5">
+    <div id="preparacion-nave" class="card text-white p-4 shadow-lg">
+        <h1 class="text-center mb-4">Preparación de Nave para la Batalla Galáctica</h1>
+        <p id="texto-info">Construye tu propia nave espacial. Selecciona los elementos considerando su valor y los créditos disponibles.</p>
+        <div id="elementos">
+            <div class="form-group">
+                <label>Combustible Galáctico (100 créditos por unidad):</label>
+                <input type="number" min="0" value="0" data-precio="100" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Escudos Defensivos (500 créditos por unidad):</label>
+                <input type="number" min="0" value="0" data-precio="500" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Cañones Láser (800 créditos por unidad):</label>
+                <input type="number" min="0" value="0" data-precio="800" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Provisiones para la Tripulación (50 créditos por unidad):</label>
+                <input type="number" min="0" value="0" data-precio="50" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Módulos de Reparación (200 créditos por unidad):</label>
+                <input type="number" min="0" value="0" data-precio="200" class="form-control">
+            </div>
+        </div>
+
+    <!-- Sección de Totales -->
+        <div id="totales" class="mt-3">
+            <p class="h5">Créditos disponibles: <span id="creditos-restantes" class="font-weight-bold">5000</span> créditos</p>
+            <p class="h5">Costo total: <span id="costo-total" class="font-weight-bold">0</span> créditos</p>
+        </div>
+
+    <!-- Botón de Confirmación -->
+        <button id="confirmar-preparacion" class="btn btn-block mt-4">Confirmar Preparación</button>
+        <p id="mensaje-limite" class="text mt-3" style="display: none;">¡Presupuesto excedido! Reduce los elementos seleccionados.</p>
+    </div>
+</div>
+
+<!-- Enlace a JavaScript de Bootstrap y jQuery -->
+<script src="script.js"></script>
+</body>
+</html>
